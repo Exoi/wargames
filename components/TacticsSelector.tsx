@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { publicPath } from "@/lib/publicPath";
 
 const maps = [
   {
@@ -26,7 +27,7 @@ export function TacticsSelector() {
       <div>
         <div className="corner-brackets relative aspect-[16/10] overflow-hidden rounded-card border border-blood bg-void">
           <Image
-            src="/tactics-safehouse-map.png"
+            src={publicPath("/tactics-safehouse-map.png")}
             alt="Top-down safehouse tactical map with enemy zone, entry point, and extraction zone"
             fill
             sizes="(min-width: 1024px) calc(100vw - 424px), calc(100vw - 32px)"

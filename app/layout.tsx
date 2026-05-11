@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Playfair_Display, Rajdhani } from "next/font/google";
 import { ConditionalFooter } from "@/components/ConditionalFooter";
 import { Preloader } from "@/components/Preloader";
+import { publicPath } from "@/lib/publicPath";
 import "./globals.css";
 
 const rajdhani = Rajdhani({
@@ -66,7 +67,7 @@ export default function RootLayout({
         <div className="site-video-background" aria-hidden="true">
           <video
             className="site-video-background__media"
-            src="/Canadian Special Forces  CSOR • JTF2.mp4"
+            src={publicPath("/Canadian Special Forces  CSOR • JTF2.mp4")}
             autoPlay
             muted
             loop

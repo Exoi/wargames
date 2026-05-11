@@ -3,13 +3,14 @@ import Link from "next/link";
 import canadaFlag from "../../flags/Flag-of-Canada.webp";
 import unitedStatesFlag from "../../flags/Flag-of-United-States.webp";
 import { ProfileCard } from "@/components/ProfileCard";
+import { publicPath } from "@/lib/publicPath";
 
 export const metadata: Metadata = {
   title: "Team",
   description: "Meet the War Games development team, staff team, content creators, and contributors.",
 };
 
-const defaultAvatarUrl = "/profile-card-default-avatar.png";
+const defaultAvatarUrl = publicPath("/profile-card-default-avatar.png");
 const profileGradient = "linear-gradient(145deg, rgba(82,82,91,0.34) 0%, rgba(24,24,27,0.82) 58%, rgba(5,5,5,0.96) 100%)";
 
 const developmentTeam = [
@@ -139,7 +140,7 @@ export default function TeamPage() {
                 key={`${member.handle}-${member.title}`}
                 {...member}
                 avatarUrl={defaultAvatarUrl}
-                iconUrl="/profile-card-pattern.svg"
+                iconUrl={publicPath("/profile-card-pattern.svg")}
                 contactText="Contact me"
                 contactHref={`https://discord.com/users/${member.handle}`}
                 innerGradient={profileGradient}
@@ -161,7 +162,7 @@ export default function TeamPage() {
                     key={`${section.title}-${member.title}`}
                     {...member}
                     avatarUrl={defaultAvatarUrl}
-                    iconUrl="/profile-card-pattern.svg"
+                    iconUrl={publicPath("/profile-card-pattern.svg")}
                     contactText="Contact Me"
                     innerGradient={profileGradient}
                   />

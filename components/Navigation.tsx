@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { publicPath } from "@/lib/publicPath";
 import { PillNav } from "./PillNav";
 
 const items = [
@@ -17,7 +18,7 @@ export function Navigation() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-[72px]">
       <PillNav
-        logo="/pillnav-logo.png"
+        logo={publicPath("/pillnav-logo.png")}
         logoAlt="War Games pill nav logo"
         items={items}
         activeHref={pathname}

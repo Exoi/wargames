@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Gamepad2, Monitor } from "lucide-react";
+import { publicPath } from "@/lib/publicPath";
 
 type Platform = {
   label: string;
@@ -11,7 +12,7 @@ type Platform = {
 
 const platforms: Platform[] = [
   { label: "Windows PC", Icon: Monitor },
-  { label: "Steam", image: "/steam-logo.png" },
+  { label: "Steam", image: publicPath("/steam-logo.png") },
   { label: "Console TBD", Icon: Gamepad2 },
 ];
 
@@ -27,7 +28,7 @@ export default function Home() {
           <h1 className="mt-5 flex justify-center">
             <span className="sr-only">War Games</span>
             <Image
-              src="/WARGAMES-transparent.png"
+              src={publicPath("/WARGAMES-transparent.png")}
               alt=""
               width={780}
               height={160}
@@ -74,7 +75,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-5 left-5 z-20">
           <Image
-            src="/pillnav-logo.png"
+            src={publicPath("/pillnav-logo.png")}
             alt="War Games"
             width={96}
             height={96}
