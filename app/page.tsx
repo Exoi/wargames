@@ -49,7 +49,7 @@ export default function Home() {
                   className="flex min-w-[170px] items-center justify-center gap-2 border border-white/20 bg-black/45 px-6 py-3 text-center font-mono text-xs uppercase tracking-[0.16em] text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-sm"
                 >
                   {platform.image ? (
-                    <Image src={platform.image} alt="" width={16} height={16} className="h-4 w-4 object-contain invert" />
+                    <Image src={platform.image} alt="" width={16} height={16} className="h-4 w-4 object-contain" />
                   ) : platform.Icon ? (
                     <platform.Icon className="h-4 w-4 text-zinc-300" strokeWidth={1.8} aria-hidden="true" />
                   ) : null}
